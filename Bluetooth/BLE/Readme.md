@@ -7,7 +7,7 @@
 
 ## BLE software development (base as nordic52832)
 
-  1. Nordic nRF5 SDK & Softdevice introduction
+  **1. Nordic nRF5 SDK & Softdevice introduction**
 
   * 概要的な説明
 
@@ -61,29 +61,39 @@
     
     - ハードウエアドライバー＆その他機能ライブラリ
 
-      ICのハードウエアドライバーとアプリケーション作成時に簡単使用ため提供したライブラリです。
+      アプリケーション開発を簡単できるように、ICのハードウエアドライバーとほかのよく利用機能のライブラリです。
       
-      ※本来Softdevice　APIにも含まれていますが、構成上別ものであり、分けます。
+      なお、本来であればSoftdevice　APIが含まれていますが、構成上別のものとして分けられています。
 　　　
-　　　見分け方法は関数の名前が　**_nrf__**　または **_nrfx__** で始まることです。
+　　　これらの関数は、通常、　**_nrf__**　または **_nrfx__** で始まります。
     
-      但し、例外があります。BLEとANTのプロトコルスタックに関連するライブラリ機能は　**_ble__**　と　**_ant__** で始まります。
+      ただし、BLEとANTのプロトコルスタックに関連するライブラリ機能は　**_ble__**　と　**_ant__** で始まります。
       
-      BLEとANTのプロトコルスタックに関連する関数はSoftdevice　APIをコールする形になります。以下の図を参照してください。
+      BLEとANTのプロトコルスタックに関連するライブラリ関数は、Softdevice　APIを呼び出す形で使用されます。以下の図を参照してください。
     　![BLE advertising message sequence](image/BLE_advertising_msg_seq.png)
     
       SDK　APIの詳細は以下のURLを参照してください。
 
        [nrf5 SDK V17.1.0](https://infocenter.nordicsemi.com/topic/struct_sdk/struct/sdk_nrf5_latest.html) 
 
+      ■補足
+
+      　Nordic社はSDKのバージョンアップに合わせ、ハードウエアのドライバーのAPI　(**_nrf_drv_**） を新しい（**_nrfx__**）に更新しました。既存の(**_nrf_drv_**）APIは引き続き使用可能ですが、最新のAPI利用することを推奨されます。
+      
+      　　
+      移行の方法について、以下のURLを参照してください。
+
+      [Migrate nrf_drv to nrfx drivers](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fsdk_nrf5_v17.0.0%2Fnrfx_migration_user_guide.html&anchor=getting_started_replace_nrf_drv_options_migrate)
 
     - Softdevice API
 
       プロトコルスタックのAPIです。
 
-      BLEのプロトコルスタック機能使用する場合、Softdevice　APIをコール必要です。
+      BLEの機能使用する場合には、Softdevice　APIをコール必要です。
     
-      見分け方法は関数の名前が **_sd__** で始まることです。BLE機能に関連する関数は　**_sd_ble__**で始まります。それ以外Softdevice設定及びSoCライブラリの関数は各自のキーワードが付けます。詳細は下記のURLを参照してください。
+      関数名が **_sd__** で始まることで識別できます。
+      
+      BLE機能に関連する関数は、 **_sd_ble__** で始まります。その他のSoftdevice設定及びSoCライブラリの関数は、各自のキーワードが付けられます。詳細について、以下のURLを参照してください。
 
        [S132 softdevice V7.31.0 API](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.s132.api.v7.2.0%2Findex.html)
 
