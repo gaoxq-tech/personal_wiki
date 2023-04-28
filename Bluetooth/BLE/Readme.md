@@ -1,7 +1,9 @@
-# BLE protocol & software development information
+# Bluetooth protocol & software development information
 
-## BLE Protocol detail
-  1. Core5.1
+## Bluetooth Protocol detail
+
+  1. Bluetooth history
+  
 
   1. Core5.3
 
