@@ -2,7 +2,7 @@
 
 ## Bluetooth Protocol detail
 
-  1. Bluetooth history
+  1. [Bluetooth 紹介](Bluetooth.md)
   
 
   1. Core5.3
