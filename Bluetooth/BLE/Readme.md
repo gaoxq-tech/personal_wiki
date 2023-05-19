@@ -53,6 +53,7 @@
     [Nordic nRF5 SDK ＆softdevice \(中国語)](https://www.cnblogs.com/iini/p/9095551.html)
 
     [Nordic nRF5 SDK & softdevice \(英語)](https://devzone.nordicsemi.com/guides/short-range-guides/b/getting-started/posts/introduction-to-nordic-nrf5-sdk-and-softdevice) 
+    
   2. nRF5 SDKのAPIに関して
 
      nRF5 SDKは多数の機能を提供していますが、その分APIの構成が複雑で、初心者には非常に混乱する事あります。
